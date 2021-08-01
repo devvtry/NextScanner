@@ -25,7 +25,7 @@ const Header = () => {
             style={{    
               position: 'absolute',
               top: '67px',
-              left: '24px'
+              //left: ' 543px'
             }}/>
           </Col>
         </Row>
