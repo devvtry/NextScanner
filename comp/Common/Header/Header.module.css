@@ -1,5 +1,6 @@
-.header{
+.header {
     background: #ef534e;
-    padding-bottom: 11px;
-    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+    padding: 7px;
+    /*position: fixed;*/
+    /*width: 100%;*/
 }

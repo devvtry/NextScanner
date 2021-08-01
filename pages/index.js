@@ -1,9 +1,94 @@
+import React,{ useState } from "react";
 import Head from 'next/head'
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Tabs, Tab, Button } from "react-bootstrap"
 
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const [key, setKey] = useState('veg')
+  const [quantity, setQuantity] = useState(0)
+
+  const addItemFromMenu = (val) => {
+    setQuantity(val)
+  }
+
+  const ControlledTabs = () =>  {
+      return (
+        <Tabs
+          id="controlled-tab-example"
+          activeKey={key}
+          onSelect={(k) => setKey(k)}
+          className="mb-3"
+        >
+          <Tab eventKey="veg" title="Veg">
+            <Row>
+              <Col xs={6} sm={6} md={6} lg={6} xl={6} styles={{display:'flex'}}>
+                  <Row>
+                    <Col xs={1} sm={1} md={1} lg={1} xl={1}>
+                        <i className='fa fa-user'/>
+                    </Col>
+                   <Col xs={10} sm={10} md={10} lg={10} xl={10}>
+                      Veg Momos
+                      <div style={{marginLeft:'2px'}}><i className="fa fa-rupee"></i>100</div>
+                   </Col>
+                  </Row>
+              </Col>
+              <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{textAlign:'right'}}>
+
+                 {quantity < 1 ?
+                   <Button onClick={() => addItemFromMenu(1)}>Add</Button>
+                   :
+                   <>
+                     <Button onClick={() => addItemFromMenu(quantity-1)}><i className='fa fa-minus'/></Button>
+                     <Button>{quantity}</Button>
+                     <Button onClick={() => addItemFromMenu(quantity+1)} ><i className='fa fa-plus'/></Button>
+                   </>
+                 }
+              </Col>
+            </Row>
+            <div className={styles.description}>
+              Arabic spices pita pockets, falafel, lavash, fattoush. Arabic pickle served with lebnah & hummus
+            </div>
+          </Tab>
+          <Tab eventKey="nonVeg" title="NonVeg">
+            <Row>
+              <Col xs={6} sm={6} md={6} lg={6} xl={6} styles={{display:'flex'}}>
+                  <Row>
+                    <Col xs={1} sm={1} md={1} lg={1} xl={1}>
+                      <i className='fa fa-user'/>
+                    </Col>
+                    <Col xs={10} sm={10} md={10} lg={10} xl={10}>
+                        Non Veg Momos
+                        <div style={{marginLeft:'2px'}}><i className="fa fa-rupee"></i>100</div>
+                    </Col>
+                  </Row>
+              </Col>
+              <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{textAlign:'right'}}>
+                { quantity < 1 ?
+                  <Button onClick={() => addItemFromMenu(1)}>Add</Button>
+                :
+                  <>
+                    <Button onClick={() => addItemFromMenu(quantity-1)}><i className='fa fa-minus'/></Button>
+                    <Button>{quantity}</Button>
+                    <Button onClick={() => addItemFromMenu(quantity+1)} ><i className='fa fa-plus'/></Button>
+                  </>
+                }
+              </Col>
+            </Row>
+            <div className={styles.description}>
+               Arabic spices pita pockets, falafel, lavash, fattoush. Arabic pickle served with lebnah & hummus
+            </div>
+          </Tab>
+          <Tab eventKey="drinks" title="Drinks">
+            <h6>Black Mamba Shake</h6>
+            <h6>Pita Pockets</h6>
+            <h6>Lebanese Platter</h6>
+            <h6>Water bottle</h6>
+          </Tab>
+        </Tabs>
+    );
+  }
+
   return (
     <>
     <Head>
@@ -14,122 +99,10 @@ export default function Home() {
       <Row className='mt-3'>
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
           <h1>Menus</h1>
-          <hr/>
-          <h5>Veg</h5>
-            <hr/>
-            <Row>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                Roti
-              </Col>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{textAlign:'right'}}>
-                12/-
-                </Col>
-            </Row>
-            <Row>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                Rice
-              </Col>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{textAlign:'right'}}>
-                50/-
-                </Col>
-            </Row>
-            <hr/>
-          <h5>Non-Veg</h5>
-            <hr/>
-            <Row>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                Roti
-              </Col>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{textAlign:'right'}}>
-                12/-
-                </Col>
-            </Row>
-            <Row>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                Rice
-              </Col>
-              <Col xs={6} sm={6} md={6} lg={6} xl={6} style={{textAlign:'right'}}>
-                50/-
-                </Col>
-            </Row>
+          {ControlledTabs()}
         </Col>
       </Row> 
     </Container>
     </>
   )
 }
-  
-
-
-
-
-
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-
-// export default function Home() {
-//   return (
-//     <div className={styles.container}>
-//       <Head>
-//         <title>Create Next App</title>
-//         <meta name="description" content="Generated by create next app" />
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-//       <main className={styles.main}>
-//         <h1 className={styles.title}>
-//           Welcome to <a href="https://nextjs.org">Next.js!</a>
-//         </h1>
-
-//         <p className={styles.description}>
-//           Get started by editing{' '}
-//           <code className={styles.code}>pages/index.js</code>
-//         </p>
-
-//         <div className={styles.grid}>
-//           <a href="https://nextjs.org/docs" className={styles.card}>
-//             <h2>Documentation &rarr;</h2>
-//             <p>Find in-depth information about Next.js features and API.</p>
-//           </a>
-
-//           <a href="https://nextjs.org/learn" className={styles.card}>
-//             <h2>Learn &rarr;</h2>
-//             <p>Learn about Next.js in an interactive course with quizzes!</p>
-//           </a>
-
-//           <a
-//             href="https://github.com/vercel/next.js/tree/master/examples"
-//             className={styles.card}
-//           >
-//             <h2>Examples &rarr;</h2>
-//             <p>Discover and deploy boilerplate example Next.js projects.</p>
-//           </a>
-
-//           <a
-//             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-//             className={styles.card}
-//           >
-//             <h2>Deploy &rarr;</h2>
-//             <p>
-//               Instantly deploy your Next.js site to a public URL with Vercel.
-//             </p>
-//           </a>
-//         </div>
-//       </main>
-
-//       <footer className={styles.footer}>
-//         <a
-//           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Powered by{' '}
-//           <span className={styles.logo}>
-//             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-//           </span>
-//         </a>
-//       </footer>
-//     </div>
-//   )
-// }

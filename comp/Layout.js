@@ -9,11 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Layout({ children }) {
   return (
-    <Container className={Styles.layout_container}>
+    <div className={`${Styles.layout_container}`}>
       <Header />
       {children}
       <Footer />
-    </Container>
+    </div>
   );
 }
   
