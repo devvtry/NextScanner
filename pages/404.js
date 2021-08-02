@@ -5,12 +5,12 @@ import { useRouter } from "next/router";
 
 export default function NotFound() {
   const router = useRouter();
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //   //   router.go(-1);
-  //   router.push('/')
-  //   }, 3000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+    //   router.go(-1);
+    router.push('/')
+    }, 3000);
+  }, []);
 
   return (
     <div className="not-found">
