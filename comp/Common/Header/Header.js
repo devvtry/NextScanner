@@ -1,9 +1,27 @@
+import React, {useEffect, useState} from 'react';
 import { Container, Row, Col } from "react-bootstrap"
 import  Styles from './Header.module.css'
 
 const Header = () => {
+  const [fixedHeaderClass, setFixedHeaderClass] = useState("");
+  useEffect(() => {
+    window.addEventListener('scroll', checkStickyHeader, {passive: true});
+    checkStickyHeader();
+
+    return () => window.removeEventListener("scroll", checkStickyHeader, {passive: true});
+  }, []);
+
+  const checkStickyHeader = () => {
+    // if (window.innerWidth > 991 || window.innerWidth < 991) {
+      if (window.scrollY > 50) {
+        setFixedHeaderClass(Styles.sticky_header);
+      } else {
+        setFixedHeaderClass("");
+      }
+   // }
+  }
   return (
-      <div className={Styles.header}>
+      <div className={`${Styles.header} ${fixedHeaderClass}`}>
         <Row className='pt-3'>
           <Col xs={1} sm={1} md={1} lg={1} xl={1}>
             <i className="fa fa-user-circle" style={{marginLeft: '2px'}}></i>

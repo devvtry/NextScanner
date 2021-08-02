@@ -101,7 +101,36 @@ export default function Home() {
           <h1>Menus</h1>
           {ControlledTabs()}
         </Col>
-      </Row> 
+      </Row>
+      { quantity > 0 ?
+        <Row>
+           <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+              <div
+                  class="cart-footer"
+                  style={{
+                         position: 'fixed',
+                         bottom: '0px',
+                         zIndex: 1,
+                         transform: 'translate3d(0px, 0px, 0px)',
+                         transition: 'all 0.2s ease-in 0s',
+                          height: '4rem'
+                        }}>
+                          <div
+                             className="cart-footer_item-section">
+                               1 item(s) | ₹ 185
+                          </div>
+                         <div className="cart-footer_tax-section">
+                           + taxes
+                         </div>
+                       <div className="cart-footer_viewCartBtn">
+                          <button className="ui button">
+                            VIEW CART
+                          </button>
+                       </div>
+              </div>
+           </Col>
+        </Row>
+        : null}
     </Container>
     </>
   )
