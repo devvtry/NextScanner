@@ -5,25 +5,25 @@
     "subCat": [
       {
         "id": 1,
-        "sName": "roti",
+        "sName": "Roti",
         "price": 5,
-        "description": "basmatestsetsetsetttttttttttttttttti roti"
+        "description": "Roti is a round flatbread native."
       },
       {
         "id": 2,
-        "sName": "naan",
+        "sName": "Naan",
         "price": 5,
         "description": "testsetsetsetset roti"
       },
       {
         "id": 3,
-        "sName": "butter rice",
+        "sName": "Butter rice",
         "price": 5,
         "description": "basmati roti"
       },
       {
         "id": 4,
-        "sName": "daal",
+        "sName": "Daal",
         "price": 15,
         "description": "basmati roti"
       },
@@ -31,7 +31,55 @@
         "id": 5,
         "sName": "Momoms",
         "price": 5,
-        "description": "basmati roti"
+        "description": "Basmati momoms"
+      },
+      {
+        "id": 6,
+        "sName": "Rice",
+        "price": 15,
+        "description": "Basmati roti"
+      },
+      {
+        "id": 7,
+        "sName": "Butter Roti",
+        "price": 25,
+        "description": "Butter Roti"
+      },
+      {
+        "id": 8,
+        "sName": "Garlic nan",
+        "price": 35,
+        "description": "Garlic nan"
+      },
+      {
+        "id": 9,
+        "sName": "Malai Paneer Tikka",
+        "price": 135,
+        "description": "Malai Paneer Tikka"
+      },
+      {
+        "id": 10,
+        "sName": "Paneer Lababdar",
+        "price": 105,
+        "description": "Paneer Lababdar"
+      },
+      {
+        "id": 11,
+        "sName": "Mix Veg Soup",
+        "price": 99,
+        "description": "Mix Veg Soup"
+      },
+      {
+        "id": 12,
+        "sName": "Gulab Jamun",
+        "price": 115,
+        "description": "Gulab Jamun"
+      },
+      {
+        "id": 13,
+        "sName": "Keema Mutton",
+        "price": 105,
+        "description": "Keema Mutton"
       }
     ]
   },
