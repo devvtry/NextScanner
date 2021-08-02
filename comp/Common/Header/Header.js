@@ -24,7 +24,7 @@ const Header = () => {
       <div className={`${Styles.header} ${fixedHeaderClass}`}>
         <Row className='pt-3'>
           <Col xs={1} sm={1} md={1} lg={1} xl={1}>
-            <i className="fa fa-user-circle" style={{marginLeft: '2px'}}></i>
+            <i className="fa fa-user-circle" style={{marginLeft: '2px'}}/>
           </Col>
           <Col xs={7} sm={8} md={8} lg={8} xl={8}>
             nearbuy
@@ -36,14 +36,11 @@ const Header = () => {
         </Row>
         <Row className='mt-3'>
           <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-            <input type='search' className='form-control' placeholder='     search...' />
-            <i 
-              className='fa fa-search'
-              style={{
-                position: 'absolute',
-                top: '67px',
-                marginLeft: '11px'
-            }}/>
+            <input
+              type='search'
+              className='form-control'
+              placeholder='     search...' />
+            <i className={`fa fa-search ${Styles.headerSearchIcon}`}/>
           </Col>
         </Row>
       </div>

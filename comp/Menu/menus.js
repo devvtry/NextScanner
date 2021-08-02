@@ -36,7 +36,11 @@ export default function Menus (props) {
                                                   <Col xs={6} sm={6} md={6} lg={6} xl={6} styles={{display:'flex'}}>
                                                       <Row>
                                                           <Col xs={1} sm={1} md={1} lg={1} xl={1}>
-                                                             <i className='fa fa-user'/>
+                                                             <img
+                                                               src={ item.catName.toLowerCase() == 'veg' ? '/images/veg.jpeg' : '/images/non-veg.jpeg' }
+                                                               alt=''
+                                                               width='14px'
+                                                               height='18px'/>
                                                           </Col>
                                                           <Col xs={10} sm={10} md={10} lg={10} xl={10}>
                                                               {sCat.sName}
@@ -53,9 +57,15 @@ export default function Menus (props) {
                                                           </Button>
                                                           :
                                                           <>
-                                                              <Button onClick={() => addItemFromMenu(quantity-1)}><i className='fa fa-minus'/></Button>
-                                                              <Button>{quantity}</Button>
-                                                              <Button onClick={() => addItemFromMenu(quantity+1)} ><i className='fa fa-plus'/></Button>
+                                                              <Button onClick={() => addItemFromMenu(quantity-1)}>
+                                                                <i className='fa fa-minus'/>
+                                                              </Button>
+                                                              <Button>
+                                                                {quantity}
+                                                              </Button>
+                                                              <Button onClick={() => addItemFromMenu(quantity+1)} >
+                                                                <i className='fa fa-plus'/>
+                                                              </Button>
                                                           </>
                                                       }
                                                   </Col>
