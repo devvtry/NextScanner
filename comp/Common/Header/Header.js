@@ -1,25 +1,25 @@
-import React, {useEffect, useState} from 'react';
-import { Container, Row, Col } from "react-bootstrap"
+import React, {useEffect, useState} from 'react'
+import { Row, Col } from 'react-bootstrap'
 import  Styles from './Header.module.css'
 
 const Header = () => {
-  const [fixedHeaderClass, setFixedHeaderClass] = useState("");
-  useEffect(() => {
-    window.addEventListener('scroll', checkStickyHeader, {passive: true});
-    checkStickyHeader();
+  const [fixedHeaderClass, setFixedHeaderClass] = useState('')
 
-    return () => window.removeEventListener("scroll", checkStickyHeader, {passive: true});
+  useEffect(() => {
+    window.addEventListener('scroll', checkStickyHeader, {passive: true})
+    checkStickyHeader()
+
+    return () => window.removeEventListener('scroll', checkStickyHeader, {passive: true})
   }, []);
 
   const checkStickyHeader = () => {
-    // if (window.innerWidth > 991 || window.innerWidth < 991) {
       if (window.scrollY > 50) {
-        setFixedHeaderClass(Styles.sticky_header);
+        setFixedHeaderClass(Styles.sticky_header)
       } else {
-        setFixedHeaderClass("");
+        setFixedHeaderClass('')
       }
-   // }
   }
+
   return (
       <div className={`${Styles.header} ${fixedHeaderClass}`}>
         <Row className='pt-3'>
@@ -38,11 +38,11 @@ const Header = () => {
           <Col xs={12} sm={12} md={12} lg={12} xl={12}>
             <input type='search' className='form-control' placeholder='     search...' />
             <i 
-            className='fa fa-search' 
-            style={{    
-              position: 'absolute',
-              top: '67px',
-              marginLeft: '11px'
+              className='fa fa-search'
+              style={{
+                position: 'absolute',
+                top: '67px',
+                marginLeft: '11px'
             }}/>
           </Col>
         </Row>

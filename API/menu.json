@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "catName": "Veg",
+    "subCat": [
+      {
+        "id": 1,
+        "sName": "roti",
+        "price": 5,
+        "description": "basmati roti"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "catName": "Non-Veg",
+    "subCat": [
+      {
+        "id": 1,
+        "sName": "rice",
+        "price": 10,
+        "description": "basmati rice"
+      },
+      {
+        "id": 2,
+        "sName": "non veg momo",
+        "price": 50,
+        "description": "non veg momo des rice"
+      }
+    ]
+  }
+]

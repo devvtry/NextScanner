@@ -1,8 +1,6 @@
 .header {
     background: #ef534e;
     padding: 7px;
-    /*position: fixed;*/
-    /*width: 100%;*/
 }
 .sticky_header{
     position: fixed;

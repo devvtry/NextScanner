@@ -1,0 +1,8 @@
+.description {
+    font-size: 1rem;
+    padding-top: .42em;
+    color: rgba(0, 0, 0, .54);
+    text-align: left;
+    overflow-wrap: break-word;
+    padding-left: 22px;
+}
