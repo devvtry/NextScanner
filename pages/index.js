@@ -106,7 +106,7 @@ export default function Home() {
         <Row>
            <Col xs={12} sm={12} md={12} lg={12} xl={12}>
               <div
-                  class="cart-footer"
+                  className="cart-footer"
                   style={{
                          position: 'fixed',
                          bottom: '0px',
