@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
-import { Button, Col, Row, Tab, Tabs } from "react-bootstrap";
+import { useEffect, useState } from 'react'
+import { Button, Col, Row, Tab, Tabs } from 'react-bootstrap'
 
-import ApiData from "../../API/menu";
-import styles from "./menus.module.css";
+import ApiData from '../../API/menu'
+import styles from './menus.module.css'
 
 export default function Menus(props) {
-  const { quantity, addItemFromMenu } = props;
+  const { quantity, addItemFromMenu } = props
 
-  const [key, setKey] = useState("veg");
-  const [menuList, setMenuList] = useState([]);
+  const [key, setKey] = useState('veg')
+  const [menuList, setMenuList] = useState([])
 
   useEffect(() => {
-    setMenuList(ApiData);
-  }, []);
+    setMenuList(ApiData)
+  }, [])
 
   return (
-    <Row className="mt-3">
+    <Row className='mt-3'>
       <Col xs={12} sm={12} md={12} lg={12} xl={12}>
         <h1>Menus</h1>
-        <Tabs activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
+        <Tabs activeKey={key} onSelect={(k) => setKey(k)} className='mb-3'>
           {menuList.map((item, i) => {
             return (
               <Tab
@@ -36,25 +36,25 @@ export default function Menus(props) {
                           md={6}
                           lg={6}
                           xl={6}
-                          styles={{ display: "flex" }}
+                          styles={{ display: 'flex' }}
                         >
                           <Row>
                             <Col xs={1} sm={1} md={1} lg={1} xl={1}>
                               <img
                                 src={
-                                  item.catName.toLowerCase() == "veg"
-                                    ? "/images/veg.jpeg"
-                                    : "/images/non-veg.jpeg"
+                                  item.catName.toLowerCase() == 'veg'
+                                    ? '/images/veg.jpeg'
+                                    : '/images/non-veg.jpeg'
                                 }
                                 alt=""
-                                width="14px"
-                                height="18px"
+                                width='14px'
+                                height='18px'
                               />
                             </Col>
                             <Col xs={10} sm={10} md={10} lg={10} xl={10} style={{fontWeight:'bold'}}>
                               {sCat.sName}
-                              <div style={{ marginLeft: "2px",fontWeight:'normal' }}>
-                                <i className="fa fa-rupee"></i> {sCat.price}
+                              <div style={{ marginLeft: '2px', fontWeight:'normal' }}>
+                                <i className='fa fa-rupee'/> {sCat.price}
                               </div>
                             </Col>
                           </Row>
@@ -65,7 +65,7 @@ export default function Menus(props) {
                           md={6}
                           lg={6}
                           xl={6}
-                          style={{ textAlign: "right" }}
+                          style={{ textAlign: 'right' }}
                         >
                           {quantity < 1 ? (
                             <Button onClick={() => addItemFromMenu(1)}>
@@ -76,13 +76,13 @@ export default function Menus(props) {
                               <Button
                                 onClick={() => addItemFromMenu(quantity - 1)}
                               >
-                                <i className="fa fa-minus" />
+                                <i className='fa fa-minus' />
                               </Button>
                               <Button>{quantity}</Button>
                               <Button
                                 onClick={() => addItemFromMenu(quantity + 1)}
                               >
-                                <i className="fa fa-plus" />
+                                <i className='fa fa-plus' />
                               </Button>
                             </>
                           )}
@@ -95,10 +95,10 @@ export default function Menus(props) {
                   );
                 })}
               </Tab>
-            );
+            )
           })}
         </Tabs>
       </Col>
     </Row>
-  );
+  )
 }

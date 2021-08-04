@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Row, Col } from 'react-bootstrap'
+
 import  Styles from './Header.module.css'
 
 const Header = () => {
@@ -44,7 +45,7 @@ const Header = () => {
           </Col>
         </Row>
       </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

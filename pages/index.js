@@ -1,10 +1,9 @@
 import React,{ useState } from 'react'
-
 import { Container } from 'react-bootstrap'
 
-import Head from 'next/head'
+import Head from '../comp/Common/Head/head'
 import MenusComp from '../comp/Menu/menus'
-import CardTotal from '../comp/card/cardTotal'
+import CardTotal from '../comp/cardTotal/cardTotal'
 
 export default function Home() {
   const [quantity, setQuantity] = useState(0)
@@ -15,10 +14,10 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-      <title>My Web | Home</title>
-      <meta name='keywords' content='mywebsite'/>
-    </Head>
+    <Head
+      title={'Home'}
+      keywords={'mywebsite'}
+    />
     <Container>
       <MenusComp
          quantity={ quantity }
