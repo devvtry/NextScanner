@@ -1,5 +1,4 @@
 import React,{ useState } from 'react'
-import { Container } from 'react-bootstrap'
 
 import Head from '../comp/Common/Head/head'
 import MenusComp from '../comp/Menu/menus'
@@ -18,16 +17,14 @@ export default function Home() {
       title={'Home'}
       keywords={'mywebsite'}
     />
-    <Container>
-      <MenusComp
-         quantity={ quantity }
-         addItemFromMenu={ addItemFromMenu }
-      />
-      <CardTotal
-         quantity={ quantity }
-         price={ 100 }
-      />
-    </Container>
+    <MenusComp
+       quantity={ quantity }
+       addItemFromMenu={ addItemFromMenu }
+    />
+    <CardTotal
+       quantity={ quantity }
+       price={ 100 }
+    />
     </>
   )
 }

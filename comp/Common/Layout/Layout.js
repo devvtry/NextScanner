@@ -1,4 +1,6 @@
 import React from 'react'
+import { Container} from 'react-bootstrap'
+
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 
@@ -9,7 +11,9 @@ export default function Layout({ children }) {
   return (
     <div className={`${Styles.layout_container}`}>
       <Header />
-      {children}
+         <Container className={Styles.layout_main_container}>
+           {children}
+         </Container>
       <Footer />
     </div>
   );

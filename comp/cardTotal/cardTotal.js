@@ -1,10 +1,14 @@
 import { Col, Row } from 'react-bootstrap'
 
 import styles from './cardTotal.module.css'
+import Router from "next/router";
 
 export default function CardTotal(props) {
   const { quantity, price } = props
 
+  const handleViewCard = () => {
+    Router.push('/card')
+  }
     return (
       <div>
           { quantity > 0 ?
@@ -27,7 +31,9 @@ export default function CardTotal(props) {
                                        + taxes
                               </div>
                               <div className={styles.cardFooterViewCartBtn}>
-                                  <button className={`${styles.ui} ${styles.button}`}>
+                                  <button
+                                    onClick={() => handleViewCard()}
+                                    className={`${styles.ui} ${styles.button}`}>
                                       VIEW CART
                                   </button>
                               </div>

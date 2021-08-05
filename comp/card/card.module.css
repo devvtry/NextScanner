@@ -1,0 +1,175 @@
+
+.cartFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 14px 0 14px 14px;
+    background-color: #ef534e;
+    color: #fff;
+    left: 0;
+    right: 0;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+.cartFooterItemSection {
+    font-size: 16px;
+    color: #fff;
+}
+
+.cartFooterTaxSection {
+    font-size: 14px;
+    opacity: .6;
+    padding-left: 10px;
+}
+.cardFooterViewCartBtn {
+    margin-left: auto;
+}
+
+.cardFooterViewCartBtn .ui.button {
+    background: #ef534e;
+    color: #fff;
+}
+.ui.button, .ui.buttons .button, .ui.buttons .or {
+    font-size: 1rem;
+}
+.ui.button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    vertical-align: baseline;
+    background: #ef534e none;
+    color: rgba(0, 0, 0, .6);
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em .78571429em;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+}
+
+/*order details*/
+.cartTitleSection .cart_title {
+    font-size: 1.71rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #616161;
+}
+
+/*delivery card*/
+.cart .deliveryCard {
+    margin-top: 1.14em;
+}
+.deliveryCard {
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #bdbdbd;
+    background-color: #f5f5f5;
+    padding: 16px;
+    position: relative;
+}
+.deliveryCardText {
+    font-size: 14px;
+    color: #616161;
+    text-align: left;
+}
+.deliveryCardLink {
+    font-weight: 700;
+    color: #4a90e2;
+    cursor: pointer;
+}
+
+/*instruction section*/
+.cart_specialInstructions {
+    margin: 2% 5%;
+}
+.textField .ui.input {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.ui.input {
+    position: relative;
+    font-weight: 400;
+    font-style: normal;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: rgba(0,0,0,.87);
+    width: 100%;
+    font-size: 1em;
+}
+.ui.input>input {
+    font-size: 16px;
+    height: 40px;
+}
+.ui.input>input {
+    margin: 0;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    text-align: left;
+    line-height: 1.21428571em;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    padding: .67857143em 1em;
+    background: #fff;
+    border: 1px solid rgba(34,36,38,.15);
+    color: rgba(0,0,0,.87);
+    border-radius: .28571429rem;
+    -webkit-transition: border-color .1s ease,-webkit-box-shadow .1s ease;
+    transition: box-shadow .1s ease,border-color .1s ease,-webkit-box-shadow .1s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.ui input {
+    border: transparent!important;
+    width: 100%;
+    background: #f5f5f5!important;
+}
+/*line break section*/
+.cart_line_break_2 {
+    width: auto;
+    height: 1px;
+    background-color: #303030;
+    margin-bottom: 4px;
+    display:block;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/*total section*/
+.cart_total_section {
+    display: flex;
+    flex-direction: column;
+    padding: .85em 1.71em;
+}
+.cart_total_section div {
+    display: flex;
+}
+.cart_total_section .taxes_text {
+    font-size: .85rem;
+}
+.cart_total_section .info_icon {
+    padding-left: .57em;
+}
+.cart_total_section .total {
+    display: flex;
+    flex-direction: row;
+    padding-top: .28em;
+    justify-content: space-between;
+}
+.cart_total_section .total .amount {
+    font-size: 1.28rem;
+    font-weight: 600;
+    color: #303030;
+}

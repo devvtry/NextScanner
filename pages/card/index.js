@@ -1,7 +1,6 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
-
 import Head from '../../comp/Common/Head/head'
+import Card from '../../comp/card/card'
 
 export default function CardDetails() {
 
@@ -11,9 +10,7 @@ export default function CardDetails() {
          title={'Card'}
          keywords={'Card'}
       />
-      <Container>
-
-      </Container>
+      <Card/>
     </>
   )
 }
